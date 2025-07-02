@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - IT Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 60px;
+            background-color: #3b82f6;
+        }
+        
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .print-button:hover {
+            background-color: #2563eb;
+        }
+        
+        @media print {
+            .no-print {
+                display: none;
+            }
+            
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">Jose Flores</h1>
+                    <p class="text-lg text-blue-100">IT Professional</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <button onclick="printResume()" class="print-button bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition duration-300 no-print">
+                        <i class="fas fa-print mr-2"></i>Print Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4 md:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Column -->
+            <div class="md:col-span-1">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-semibold mb-4 section-title">Contact</h2>
+                    <div class="space-y-3 mt-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 w-6"></i>
+                            <span>tekwebdev1@protonmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 w-6"></i>
+                            <span>754-837-1867</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-language text-blue-500 w-6"></i>
+                            <span>English, Spanish</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-semibold mb-4 section-title">Education</h2>
+                    <div class="space-y-4 mt-6">
+                        <div>
+                            <h3 class="font-medium">Bachelor of Science in Information Technology</h3>
+                            <p class="text-gray-600">Broward College</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Associate of Science in Computer Network Security</h3>
+                            <p class="text-gray-600">Broward College</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Associate of Arts</h3>
+                            <p class="text-gray-600">Broward College</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">CompTIA Network+</h3>
+                            <p class="text-gray-600">In Progress</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4 section-title">Technical Skills</h2>
+                    <div class="mt-6">
+                        <div class="mb-3">
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Windows</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Linux</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">macOS</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">VPN</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">LAN/WAN</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">IP Configuration</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Freshdesk</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">ServiceNow</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Zoho</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Epic</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">CRM</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">SaaS</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">AI</span>
+                        </div>
+                        <div>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Zoom</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Microsoft Teams</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="md:col-span-2">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-semibold mb-4 section-title">Professional Summary</h2>
+                    <p class="mt-6">
+                        Detail-oriented and bilingual IT professional with a strong background in customer service, technical support, and troubleshooting across multiple operating systems. Skilled in providing exceptional IT desktop support, resolving technical issues, and delivering training to end-users. Adept at communicating technical concepts to non-technical users in both English and Spanish.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-semibold mb-4 section-title">Technical Experience</h2>
+                    <ul class="list-disc pl-5 mt-6 space-y-2">
+                        <li>Experienced in leveraging artificial intelligence technologies to enhance productivity and decision-making</li>
+                        <li>Proficient in managing and troubleshooting Windows, Linux and macOS environments</li>
+                        <li>Skilled in configuring and maintaining VPNs, LANs, IP setups, and router configurations to optimize network performance and security</li>
+                        <li>Experienced in using ticketing systems such as Freshdesk, ServiceNow, Zoho and Epic</li>
+                        <li>Adept at leveraging CRM platforms and SaaS tools to deliver client support</li>
+                        <li>Skilled in generating weekly reports, tracking performance metrics, and providing actionable insights to support decision-making</li>
+                        <li>Expertise in installing, testing, and maintaining personal computing devices, network hardware, and software systems across LAN/WAN infrastructures</li>
+                        <li>Proven ability to deliver effective remote support to offsite users, ensuring minimal downtime and high user satisfaction</li>
+                        <li>Proficient in desktop setup, software updates, and system maintenance to ensure optimal performance and security</li>
+                        <li>Fluent in English and Spanish, enabling effective communication with diverse teams and clients</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4 section-title">Professional Experience</h2>
+                    <div class="space-y-6 mt-6">
+                        <div class="experience-item bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                            <div class="flex flex-col md:flex-row justify-between mb-2">
+                                <h3 class="font-semibold text-lg">Hosting Moderator for Webinars</h3>
+                                <span class="text-blue-600 font-medium">August 2025-Present</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row justify-between mb-3">
+                                <span class="text-gray-600">Global Alumni</span>
+                                <span class="text-gray-600">Miami, FL (Remote)</span>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Attend training sessions prior to program launch</li>
+                                <li>Join the sessions 30 minutes before for tech run</li>
+                                <li>Run sound and video check on Zoom</li>
+                                <li>Ensure all documents, slides are in order and ready for the sessions</li>
+                                <li>Create and manage break-out rooms</li>
+                                <li>Assist instructor during presentation as needed</li>
+                                <li>Assist participants with questions in chat and assist instructor during Q&A</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                            <div class="flex flex-col md:flex-row justify-between mb-2">
+                                <h3 class="font-semibold text-lg">Moderator/Trainer Program Support Remote</h3>
+                                <span class="text-blue-600 font-medium">October 2023-Present</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row justify-between mb-3">
+                                <span class="text-gray-600">TempusUnlimited</span>
+                                <span class="text-gray-600">Boston, MA (Remote)</span>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Implemented and maintained the MassHealth EVV program, ensuring compliance with quality standards</li>
+                                <li>Delivered comprehensive training and program support via Zoom and Microsoft Teams</li>
+                                <li>Conducted weekly analytics and reporting to track team performance and progress</li>
+                                <li>Managed and maintained moderator documentation for consistency and accuracy</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                            <div class="flex flex-col md:flex-row justify-between mb-2">
+                                <h3 class="font-semibold text-lg">Technical Support Agent Remote</h3>
+                                <span class="text-blue-600 font-medium">May 2023-October 2023</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row justify-between mb-3">
+                                <span class="text-gray-600">GoHighLevel</span>
+                                <span class="text-gray-600">Dallas, TX (Remote)</span>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Provided timely and accurate technical support to customers via phone, Zoom, email, and chat</li>
+                                <li>Troubleshooted and resolved product malfunctions, documenting issues in internal databases</li>
+                                <li>Monitored and addressed customer complaints on social media platforms</li>
+                                <li>Collaborated with Product, Sales, and Marketing teams to gather and share feedback</li>
+                                <li>Proactively followed up with customers to ensure resolution of technical concerns</li>
+                                <li>Provided remote support for offsite users, resolving issues efficiently</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                            <div class="flex flex-col md:flex-row justify-between mb-2">
+                                <h3 class="font-semibold text-lg">Patient Financial Representative</h3>
+                                <span class="text-blue-600 font-medium">April 2018-May 2023</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row justify-between mb-3">
+                                <span class="text-gray-600">Memorial Healthcare System</span>
+                                <span class="text-gray-600">Hollywood, FL</span>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Managed accurate data entry for patient demographics, billing, and clinical information</li>
+                                <li>Validated insurance benefits, coordinated procedure authorizations, and handled patient billing processes</li>
+                                <li>Trained employees on software and processes to improve team efficiency</li>
+                                <li>Provided culturally sensitive translation of medical documents and communications between Spanish and English</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <p>&copy; 2023 John Doe. All rights reserved.</p>
+            <p class="mt-2 text-gray-400">IT Professional | Technical Support Specialist</p>
+        </div>
+    </footer>
+
+    <script>
+        function printResume() {
+            window.print();
+        }
+        
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add animation to experience items
+        const experienceItems = document.querySelectorAll('.experience-item');
+        experienceItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.classList.add('bg-blue-50');
+            });
+            item.addEventListener('mouseleave', () => {
+                item.classList.remove('bg-blue-50');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'959187f1452a883b',t:'MTc1MTQ5NDgzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
